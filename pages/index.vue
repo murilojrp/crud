@@ -1,16 +1,14 @@
 <template>
 <v-container
-  style="margin-top:5%"
+  style="margin-top:2%"
 >
 <v-card
-  style="border:ridge"
+  style="border:ridge; color:#073b5b; width:80%; margin-left: 7%; margin-top: 2%;"
   outlined
 >
     <v-card-title
       style="color:#073b5b; margin-left:1%"
     >
-      Universidades
-      <v-spacer></v-spacer>
       <v-text-field
         v-model="search"
         append-icon="mdi-magnify"
@@ -26,6 +24,7 @@
           v-bind="attrs"
           v-on="on"
           style="margin-right:1%;"
+          to='/create'
         >
           Nova Universidade
         </v-btn>
@@ -41,14 +40,14 @@
         small
         class="mr-2"
         @click="editItem(item)"
-        style="color: #25abb3"
+        color="info"
       >
         mdi-pencil
       </v-icon>
       <v-icon
         small
         @click="deleteItem(item)"
-        style="color: #cf5751"
+        color="error"
       >
         mdi-delete
       </v-icon>
@@ -74,7 +73,7 @@ export default {
             value: 'name',
           },
           { text: 'Dados', sortable: false, value: 'data' },
-          { text: 'Actions', value: 'actions'}
+          { text: 'Actions', sortable: false, value: 'actions'}
         ],
         universities: [
           {

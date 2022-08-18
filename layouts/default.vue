@@ -19,7 +19,7 @@
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title v-text="item.title" />
+            <v-list-item-title v-text="item.title" style="color:#073b5b" />
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -28,11 +28,38 @@
       :clipped-left="clipped"
       fixed
       app
-      style="height:10%"
+      style="height:10%; padding-top: 1%;"
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-toolbar-title v-text="title" />
-      <v-spacer />
+      <h2
+      style="color:#073b5b; margin-left: 1%;"
+      > Universidades </h2>
+      <v-spacer></v-spacer>
+      <img src="../assets/6091-removebg-preview.png" width="12%" style="margin-right:22%">
+      <h4
+      style="color:#073b5b; margin-right: 1%;"
+      > Olá "Fulano", seja bem-vindo! </h4>
+      <v-avatar color="#073b5b" style="margin-right:1%">
+      <v-icon 
+      dark
+      >
+        mdi-account
+      </v-icon>
+      </v-avatar>
+      <v-avatar color="#073b5b" style="margin-right:1%">
+      <v-icon 
+      dark
+      >
+        mdi-bell
+      </v-icon>
+      </v-avatar>
+      <v-avatar color="#073b5b">
+      <v-icon 
+      dark
+      >
+        mdi-exit-run
+      </v-icon>
+      </v-avatar>
     </v-app-bar>
     <v-main>
       <v-container>
@@ -42,10 +69,10 @@
     <v-footer
       :absolute="!fixed"
       app
-      style="background-color:#073b5b; height: 10%"
+      style="background-color:#073b5b; height: 10%;"
     >
       <span
-      style="color:white"
+      style="color:white; align-self:center"
       >&copy; {{ `Produzido por @MurigolArts `}}</span>
     </v-footer>
   </v-app>
@@ -62,13 +89,13 @@ export default {
       items: [
         {
           icon: 'mdi-apps',
-          title: 'Welcome',
+          title: 'Lista',
           to: '/'
         },
         {
           icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
+          title: 'Criar',
+          to: '/create'
         }
       ],
       miniVariant: false,
